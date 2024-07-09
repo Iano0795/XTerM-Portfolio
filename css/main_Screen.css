@@ -1,0 +1,101 @@
+@import url(/css/global.css);
+
+/* Header style */
+header {
+  top: 0;
+  width: 100%;
+  padding-top: 10px;
+}
+
+#home_link {
+  text-align: center;
+}
+
+/* Navigation bar */
+nav {
+  padding: 20px;
+}
+
+nav h4 {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* Main content style */
+#hello_ascii_art {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: space-between;
+}
+.output.directory {
+  color: var(--color-royalblue);
+}
+
+#system-info {
+  margin-left: 20px;
+  font-size: var(--font-size-xl);
+  color: var(--color-springgreen);
+  flex-grow: 1;
+  color: var(--color-springgreen);
+}
+pre {
+  color: var(--color-royalblue);
+  font-size: var(--font-size-3xl);
+}
+
+#terminal {
+  padding-left: var(--padding-xl);
+  font-size: var(--font-size-5xl);
+}
+
+.typing_container {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.cursor {
+  border-right: .2em solid white;
+  animation: blink-caret .5s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+.typed-text {
+  color: var(--color-springgreen);
+}
+.user, .path{
+  color: var(--color-springgreen);
+}
+.user p{
+  color: var(--color-royalblue);
+  display: inline-block;
+}
+.path p{
+  color: white;
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+.output{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Footer content style */
+footer {
+  bottom: 0;
+  height: max-content;
+  width: 100vw;
+  margin-top: 20px;
+}
+
+#wise_saying {
+  text-align: center;
+}
