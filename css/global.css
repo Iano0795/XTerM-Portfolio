@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     color: white;
+    font-family: var(--font-ubuntu-mono);
 }
 body{
     background-image: url('/assets/images/bg.png');
@@ -9,15 +10,35 @@ body{
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body.loading{
+    background-image: url('/assets/images/booting_bg.jpg');
+}
+body.loaded{
+    background-image: url('/assets/images/bg.svg');
 }
 #opacity_bringer{
+    display: none;
     top: 0;
     left: 0;
     font-family: var(--font-ubuntu-mono);
     background-color: var(--color-gray-200);
     width: 100vw;
     height: 100vh;
-
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 2s ease-out, opacity 2s ease-out;
+    flex-direction: column;
+}
+#opacity_bringer.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 :root {
