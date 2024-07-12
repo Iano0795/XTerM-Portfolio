@@ -1,11 +1,12 @@
-*{
+* {
     margin: 0;
     padding: 0;
     color: white;
     font-family: var(--font-ubuntu-mono);
 }
-body{
-    background-image: url('/assets/images/bg.png');
+
+body {
+    /* background-image: url('/assets/images/bg.png'); */
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
@@ -14,31 +15,57 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
-body.loading{
+
+body.loading {
     background-image: url('/assets/images/booting_bg.jpg');
 }
-body.loaded{
+
+/* body.loaded {
     background-image: url('/assets/images/bg.svg');
-}
-#opacity_bringer{
+} */ 
+
+#opacity_bringer {
+    position: absolute;
     display: none;
-    top: 0;
-    left: 0;
+    top: 8%;
+    left: 10%;
     font-family: var(--font-ubuntu-mono);
     background-color: var(--color-gray-200);
-    width: 100vw;
-    height: 100vh;
+    width: 80%;
+    height: 90%;
     z-index: 1000;
     opacity: 0;
     transform: translateY(-100%);
     flex-direction: column;
+    border-radius: 10px;
 }
+
 #opacity_bringer.show {
     display: flex;
     opacity: 1;
     transform: translateY(0);
     transition: transform 3s ease-out, opacity 3s ease-out;
+}
+
+#canvas {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #003300; /* Dark green background */
+    /* z-index: 0; */
+}
+
+#desktop_screen.show{
+    display: block;
+    background-color: transparent;
+}
+#canvas.show{
+    display: block;
 }
 
 :root {
@@ -58,6 +85,7 @@ body.loaded{
     --color-gray-200: rgba(0, 0, 0, 0.84);
     --color-white: #fff;
     --color-royalblue: #0263f5;
+    --color-royalblue1:#45c5f8;
     --color-springgreen: #05fe5a;
   
     /* Paddings */
