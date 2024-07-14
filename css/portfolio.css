@@ -55,7 +55,7 @@ header {
 
 /* Navigation bar */
 nav {
-  padding: 20px;
+  padding: 3px;
 }
 
 nav h4:hover {
@@ -276,9 +276,9 @@ nav h4 {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-pre{
+/* pre{
   white-space: pre-wrap;
-}
+} */
 
 .output.directory {
   color: var(--color-royalblue);
@@ -349,7 +349,7 @@ pre {
 footer {
   bottom: 0;
   height: max-content;
-  width: 100vw;
+  width: 100%;
   margin-top: 20px;
   padding: 20px;
   display: flex;

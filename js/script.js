@@ -28,7 +28,7 @@ class DotAnimation {
 
   animate() {
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-      this.ctx.fillStyle = '#00FF00'; // Bright green dots
+      this.ctx.fillStyle = '#00fff2'; // Bright green dots
 
       this.dots.forEach(dot => {
           // Move the dot
@@ -50,7 +50,7 @@ class DotAnimation {
               const dy = dot.y - otherDot.y;
               const distance = Math.sqrt(dx * dx + dy * dy);
               if (distance < this.maxDistance) {
-                  this.ctx.strokeStyle = `rgba(0, 255, 0, ${1 - distance / this.maxDistance})`; // Bright green lines
+                  this.ctx.strokeStyle = `rgba(0, 0, 255, ${1 - distance / this.maxDistance})`; // Bright green lines
                   this.ctx.beginPath();
                   this.ctx.moveTo(dot.x, dot.y);
                   this.ctx.lineTo(otherDot.x, otherDot.y);

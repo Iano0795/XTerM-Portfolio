@@ -56,7 +56,7 @@ body.loading {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #003300; /* Dark green background */
+    background-color: #070046; /* Dark green background */
     /* z-index: 0; */
 }
 
@@ -85,7 +85,7 @@ body.loading {
     --color-gray-200: rgba(0, 0, 0, 0.84);
     --color-white: #fff;
     --color-royalblue: #0263f5;
-    --color-royalblue1:#45c5f8;
+    --color-royalblue1:#00fff2;
     --color-springgreen: #05fe5a;
   
     /* Paddings */
