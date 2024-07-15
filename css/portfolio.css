@@ -104,9 +104,9 @@ nav h4 {
   display: flex;
   align-items: center;
 }
-#start_button{
+/* #start_button{
   margin-right: 20px;
-}
+} */
 
 #start_button img {
   width: 30px;
