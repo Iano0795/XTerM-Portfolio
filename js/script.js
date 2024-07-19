@@ -86,11 +86,18 @@ class LoadingScreen {
   stopLoading() {
       clearInterval(this.interval);
       document.getElementById('loading_screen').style.display = 'none';
-      document.getElementById('desktop_screen').style.display = 'block';
+      if(window.innerWidth <= 800){
+        document.getElementById('mobile_screen').style.display = 'flex';
+      }else{
+        document.getElementById('desktop_screen').style.display = 'block';
+      }
       document.body.classList.remove('loading');
-      const dotAnimation = new DotAnimation('canvas');
-      document.getElementById('canvas').classList.add('show');
-      dotAnimation.animate();
+      document.body.classList.add('loaded');
+      if(window.innerWidth > 800){
+        const dotAnimation = new DotAnimation('canvas');
+        document.getElementById('canvas').classList.add('show');
+        dotAnimation.animate();
+      }
   }
 }
 
@@ -154,6 +161,7 @@ class Terminal {
   }
 }
 
+
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize components
   const loadingScreen = new LoadingScreen();
@@ -162,7 +170,29 @@ document.addEventListener('DOMContentLoaded', function() {
   ];
   const openOpacityBringerElements = ['xterm', 'xterm_app', 'portfolio_window'];
   document.body.classList.add('loading');
+  const projects = document.getElementById('projects_button');
+  projects.addEventListener('click', () => {
+    const projects_window = document.getElementById('projects_window');
+    projects_window.classList.add('show');
+  });
 
+  const closeProject = document.getElementById('projects_close_button');
+  closeProject.addEventListener('click', () => {
+    const projects_window = document.getElementById('projects_window');
+    projects_window.classList.remove('show');
+  })
+
+  const mobile_portfolioBTN = document.getElementById('portfolioBTN');
+  mobile_portfolioBTN.addEventListener('click', () => {
+    const mobile_portfolio = document.getElementById('mobile_portfolio');
+    mobile_portfolio.style.display = 'flex';
+  });
+
+  const closeBTN = document.getElementById('closeBTN');
+  closeBTN.addEventListener('click', () => {
+    const mobile_portfolio = document.getElementById('mobile_portfolio');
+    mobile_portfolio.style.display = 'none';
+  })
   // Start loading screen animation
   loadingScreen.startLoading();
 

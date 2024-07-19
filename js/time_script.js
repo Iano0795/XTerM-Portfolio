@@ -1,3 +1,17 @@
+function updateMobileTime() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+
+    // Pad the hours and minutes with leading zeros if necessary
+    const paddedHours = hours.toString().padStart(2, '0');
+    const paddedMinutes = minutes.toString().padStart(2, '0');
+
+    // Update the HTML elements
+    document.getElementById('hour').textContent = paddedHours;
+    document.getElementById('min').textContent = paddedMinutes;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const menu = document.getElementById('start_menu');
     const timeElement = document.getElementById('time');
@@ -31,4 +45,15 @@ document.addEventListener('DOMContentLoaded', function() {
     updateTime();
     // Update the time every second
     setInterval(updateTime, 1000);
+
+    // Call the function initially to display the time immediately
+    updateMobileTime();
+
+    // Set an interval to update the time every minute (60000 milliseconds)
+    setInterval(updateMobileTime, 60000);
 });
+
+
+
+
+

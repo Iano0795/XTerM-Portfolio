@@ -1,0 +1,110 @@
+@media only screen and (max-width: 800px) {
+    body {
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+        /* overflow: hidden; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    body.loading {
+        background-image: url('/assets/images/mobile_booting.jpg');
+    }
+    body.loaded {
+        background-image: url('/assets/images/mobile_bg.jpg');
+        background-size: cover;
+    }
+    #canvas, #taskbar{
+        display: none;
+    }
+    #loading_screen{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: transparent;
+    }
+    #loading_text{
+        text-align: center;
+        position: absolute;
+        bottom: 20px;
+    }
+    #mobile_screen{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+    #desktop_up{
+        width: 100%;
+        flex-grow: 1;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #desktop_up p{
+        font-size: 4rem;
+    }
+    #desktop_down{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        height: fit-content;
+    }
+    #mobile_screen img{
+        width: 50px;
+        height: auto;
+    }    
+    #desktop_down span{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* #portfolio img, #menu img{
+        width: 50px;
+    } */
+
+    #mobile_portfolio{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.84);
+        margin-right: 60px;
+    }
+    #hello_banner{
+        width: 100%;
+        height: 35%;
+    }
+    #hello_banner img{
+        width: 100%;
+        height: auto;
+    }
+    #closeBTN{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        bottom: 40px;
+        right: 20px;
+        border-radius: 50%;
+        box-shadow: 5px 5px 4px black;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #363636e3;
+    }
+    #closeBTN img{
+        width: 25px;
+        rotate: 180deg;
+    }
+}

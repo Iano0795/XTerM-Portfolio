@@ -22,9 +22,7 @@ body.loading {
     background-image: url('/assets/images/booting_bg.jpg');
 }
 
-/* body.loaded {
-    background-image: url('/assets/images/bg.svg');
-} */ 
+ 
 
 #opacity_bringer {
     position: absolute;
@@ -72,13 +70,12 @@ body.loading {
     /* fonts */
     --font-ubuntu-mono: "Ubuntu Mono";
   
-    /* font sizes */
-    --font-size-5xl: 24px;
-    --font-size-3xl: 22px;
-    --font-size-21xl: 40px;
-    --font-size-13xl: 32px;
-    --font-size-8xl-9: 27.9px;
-    --font-size-xl: 20px;
+    --font-size-5xl: 1.5rem;      /* 24px */
+    --font-size-3xl: 1.375rem;    /* 22px */
+    --font-size-21xl: 2.5rem;     /* 40px */
+    --font-size-13xl: 2rem;       /* 32px */
+    --font-size-8xl-9: 1.74375rem;/* 27.9px */
+    --font-size-xl: 1.25rem;      /* 20px */
   
     /* Colors */
     --color-gray-100: #fafafa;
